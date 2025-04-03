@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --font-1: "Montserrat", sans-serif;
+    --font-2: "Roboto", sans-serif;
+    --color-1: #EDE947;
+    --color-2: #00ffffe5;
+    --color-3: #fff;
+    --color-4: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-2);
+}
+.bg1{
+    background: url(background\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg2{
+    background: url(background\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.link{
+    text-decoration: none;
+    color: var(--color-3);
+}
+section.hero{
+    height: 100vh;
+    background: linear-gradient(to right,rgba(10, 10, 5, 0.85),rgba(10, 10, 5, 0.6)), url(Hero.png);
+    background-size: cover;
+    background-position: center;
+}
+section.hero nav{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.1;
+    padding: 3rem 4rem;
+    font-weight: 400;
+
+}
+section.hero nav .logo{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: auto;
+    animation: topIn 2s linear;
+    animation-delay: .4s;
+}
+section.hero nav .logo span{
+    color: var(--color-1);
+}
+section.hero nav ul{
+    display: inline-block;
+    animation: topIn 2s linear;
+    animation-delay: .4s;
+}
+section.hero nav ul li{
+    display: inline-block;
+    list-style: none;
+    height: 100%;
+}
+section.hero nav ul li a{
+    color: var(--color-3);
+    line-height: 50px;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition: all .5s linear;
+}
+section.hero nav ul li a:hover{
+    color: var(--color-1);
+    transform: scale(1.1);
+}
+section.hero nav a.btn{
+    padding: 15px 35px;
+    margin-left: 10px;
+    border: 1px solid var(--color-1);
+    background-color: var(--color-1);
+    border-radius: 1.5rem;
+    color: var(--color-4);
+    animation: topIn 2s linear;
+    animation-delay: .4s;
+}
+.fa-bars{
+    display: none;
+}
+section.hero .body{
+    padding: 0 6rem;
+    padding-right: 15rem;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+section.hero .body h1{
+    font-size: 5rem;
+    margin-top: -30px;
+    font-family: var(--font-1);
+    color: var(--color-1);
+    font-weight: 400;
+    letter-spacing: 1px;
+    animation: leftIn 2.2s linear;
+    animation-delay: .4s;
+}
+section.hero .body h3{
+    color: var(--color-3);
+    font-family: var(--font-1);
+    font-size: larger;
+    font-weight: 200;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    animation: leftIn 2.2s linear;
+    animation-delay: .4s;
+}
+section.hero .body .btn{
+    padding: 15px 35px;
+    border: 1px solid var(--color-1);
+    border-radius: 1.5rem;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--color-4);
+    background: var(--color-1);
+    animation: bottomIn 2.2s linear;
+    animation-delay: .4s;
+}
+section.about{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 6rem 2rem;
+}
+section.about .aboutus{
+    margin-top: -50px;
+    padding: min(5rem, 8%);
+    background-color: var(--color-3);
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 3rem;
+    animation: rightIn linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 5%;
+}
+section.about .aboutus h1{
+    font-size: 4rem;
+}
+section.about .aboutus h2{
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-size: larger;
+}
+section.about .aboutus h4{
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-size: medium;
+}
+section.about .aboutus .btn{
+    padding: 15px 35px;
+    border: 1px solid var(--color-1);
+    border-radius: 1.5rem;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--color-4);
+    background: var(--color-1);
+}
+section.service{
+    padding: 5rem 3rem;
+    background: linear-gradient(rgba(10,10,5,0.85),rgba(10,10,5,0.85)), url(services.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-3);
+    overflow-x: hidden;
+}
+section.service h1{
+    font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    animation: bottomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-delay: .4s;
+}
+section.service .sub-title{
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 15rem;
+    text-align: center;
+    color: var(--color-3);
+}
+section.service .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 1250px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+section.service .row .service-item{
+    border: 0.1px solid rgba(245, 245, 245, 0.774);
+    border-radius: .5rem;
+    padding: min(5rem, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2.5rem;
+    position: relative;
+    transition: all .5s linear;
+}
+section.service .row .service-item:hover{
+    backdrop-filter: grayscale(400);
+    transform: scale(0.95);
+}
+section.service .row .service-item img{
+    width: 50px;
+}
+section.service .row .service-item i{
+    font-size: 2rem;
+}
+section.service .row .service-item h2{
+    font-family: var(--font-1);
+    font-weight: 100;
+    font-size: 2rem;
+}
+section.service .row .service-item h4{
+    font-family: var(--font-2);
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+section.service .row .service-item a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+section.reason{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 6rem 2rem;
+    
+}
+section.reason .aboutus{
+    padding: min(5rem, 8%);
+    margin-top: -50px;
+    background-color: var(--color-3);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    animation: leftIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.reason .aboutus h1{
+    font-size: 4rem;
+    animation: leftIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.reason .aboutus h2{
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    animation: leftIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.reason .aboutus h4{
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    animation: leftIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.reason .aboutus .btn{
+    padding: 15px 35px;
+    border: 1px solid var(--color-1);
+    border-radius: 1.5rem;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--color-4);
+    background: var(--color-1);
+    animation: bottomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.review{
+    background: linear-gradient(rgba(6, 59, 80, 0.8), rgba(4, 33, 41, 0.9)), url(review.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    padding: 4rem 0;
+    color: var(--color-3);
+    animation: bottomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+.title{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--color-1);
+    animation: bottomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    animation-delay: 0.4s;
+}
+.sub-title{
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 15rem;
+    text-align: center;
+    color: var(--color-3);
+    animation: bottomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    animation-delay: 0.6s;
+}
+section.review .row{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    max-width: 1250px;
+}
+section.review .row .review-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding: min(3rem,8%);
+    animation: zoomIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+section.review .row .review-item .rating i{
+    color: var(--color-1);
+}
+section.review .row .review-item h3{
+    font-size: 1rem;
+    font-family: var(--font-1);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+section.review .row .review-item .client{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+section.review .row .review-item .client img{
+    width: 80px;
+    border-radius: 50%;
+}
+section.referee{
+    height: 30vh;
+    background: var(--color-3);
+}
+footer{
+    background: url(footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: rightIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+footer .row{
+    padding: min(5rem, 8%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--color-4);
+}
+footer .row .footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: min(5rem, 8%);
+}
+footer .row .footer-item h3,
+footer .row .footer-item p{
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    animation: leftIn 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    animation-delay: 0.2s;
+}
+footer .copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255));
+}
+
+@media screen and (max-width: 991px) {
+    section.hero{
+        height: auto;
+        overflow-x: hidden;
+    }
+    section.hero nav{
+        justify-content: space-between;
+        position: relative;
+        padding: 3rem 1rem;
+    }
+    section.hero nav ul{
+        position: absolute;
+        top: 100%;
+        right: -300px;
+        width: 300px;
+        background: var(--color-3);
+        color: var(--color-4);
+        padding: 0;
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+        z-index: 100000;
+        transition: all .4s linear;
+    }   
+    section.hero nav ul.active{
+        right: 0;
+    }
+    section.active::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #474747;
+        z-index: 10000;
+        opacity: .91;
+    }
+    section.hero nav ul li{
+        display: block;
+        color: var(--color-4);
+        padding: 1rem;
+        margin: .5rem;
+        font-size: 1.5rem;
+        background: #eee;
+    }   
+    section.hero nav ul li a{
+        color: var(--color-4);
+    }
+    section.hero nav a.btn{
+        display: none;
+    }
+    .fa-bars{
+        font-size: clamp(1.7rem, calc(3vw + 1rem), 3rem);
+        color: var(--color-4);
+        background-color: var(--color-1);
+        box-shadow: 3px 3px 5px 1px #2b2b2be5;
+        padding: 8px 8px;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: inline-flex;
+        z-index: 1000001;
+    }
+    section.hero .body{
+        padding: 8rem 2rem;
+        align-items: flex-start;
+        padding-right: 10rem;
+        gap: 2rem;
+    }
+    section.hero .body h1{
+        font-size: 4rem;
+    }
+    section.reason,
+    section.about{
+        height: auto;
+        padding-bottom: 4rem;
+    }
+    section.reason .aboutus,
+    section.about .aboutus{
+        max-width: 70%;
+    }
+    section.service{
+        padding: 4rem 2rem;
+    }
+    section.referee{
+        height: 10vh;
+    }
+    footer{
+        height: auto;
+    }
+    footer .row{
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width:767px){
+    section.hero .body{
+        padding-right: 5rem;
+    }
+    section.reason,
+    section.about{
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 1rem 4rem;
+    }
+    section.reason .aboutus,
+    section.about .aboutus{
+        max-width: 100%;
+        width: 100%;
+    }
+    section.service .row{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    section.review .title{
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+    section.review .sub-title{
+        padding: 0;
+        font-size: clamp(.8rem, calc(2.5vw + 1rem), 1rem);
+    }
+    section.review .row{
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 555px) {
+    section.reason .aboutus h1{
+        font-size: clamp(1.5rem, calc(3vw + 1rem), 2rem);
+    }
+    footer .row{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    footer .row .footer-item{
+        align-items: center;
+    }
+    section.about .aboutus h1{
+        font-size: 2rem;
+    }
+    footer .copyright{
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 435px) {
+    section.hero nav .logo{
+        font-size: 2rem;
+    }
+    section.hero .body{
+        padding-right: 2rem;
+    }
+    section.hero .body h1{
+        font-size: 3rem;
+    }
+    section.hero .body h3{
+        font-size: small;
+    }
+    section.reason .aboutus h1,
+    section.about .aboutus h1{
+        font-family: var(--font-1);
+        font-weight: 600;
+    }
+    section.reason .aboutus h2,
+    section.about .aboutus h2{
+        font-size: smaller;
+    }
+    section.reason .aboutus h4,
+    section.about .aboutus h4{
+        font-size: x-small;
+    }
+}
+@media screen and (max-width: 310px) {
+    section.hero .body h1{
+        font-size: 2rem;
+    }
+}
